@@ -1,0 +1,9 @@
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://dubbo.apache.org/schema/dubbo"
+       xmlns="http://www.springframework.org/schema/beans" xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://dubbo.apache.org/schema/dubbo http://dubbo.apache.org/schema/dubbo/dubbo.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+    <!-- 需要调用 - 订单、运单服务 -->
+    <dubbo:reference timeout="600000" url="dubbo://127.0.0.1:28080" interface="com.study.transaction.app.service.IOrderService" id="orderService" check="false" version="1.0"/>
+    <dubbo:reference timeout="600000" url="dubbo://127.0.0.1:28081" interface="com.study.transaction.dispatch.service.IDispatchService" id="dispatchService" check="false" version="1.0"/>
+</beans>

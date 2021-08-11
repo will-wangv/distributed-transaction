@@ -1,0 +1,13 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: app-backend
+
+dubbo:
+  registry:
+    address: multicast://224.5.6.7:1234
+  protocol:
+    name: dubbo
+    port: -1

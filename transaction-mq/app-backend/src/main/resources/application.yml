@@ -1,0 +1,19 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: app-backend
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/test-backend?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+
+  rabbitmq:
+    host: 192.168.1.100
+    port: 5672
+    username: admin
+    password: admin
+    # 重要！  开启消息发送确认机制 -- 不同的客户端有不同的配置方式
+    publisher-confirms: true

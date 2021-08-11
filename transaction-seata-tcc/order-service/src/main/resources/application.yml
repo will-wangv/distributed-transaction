@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: order-service
+  datasource: 
+    url: jdbc:mysql://127.0.0.1:3306/test-order-db?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+
+dubbo:
+  registry:
+    address: multicast://224.5.6.7:1234
+  protocol:
+    name: dubbo
+    port: 28080
+    host: 127.0.0.1
